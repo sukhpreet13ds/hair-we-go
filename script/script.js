@@ -8,17 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Optional: Add a glassmorphism effect to navbar on scroll
+    // Navbar effect on scroll
     window.addEventListener('scroll', () => {
         const logo = document.querySelector('.navbar-logo');
         if (window.scrollY > 50) {
-            nav.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-            nav.style.backdropFilter = 'blur(10px)';
-            nav.style.padding = '15px 50px';
+            nav.classList.add('scrolled');
             if (logo) logo.classList.add('logo-hidden');
         } else {
-            nav.style.backgroundColor = 'transparent';
-            nav.style.backdropFilter = 'none';
-            nav.style.padding = '20px 50px';
+            nav.classList.remove('scrolled');
             if (logo) logo.classList.remove('logo-hidden');
         }
     });

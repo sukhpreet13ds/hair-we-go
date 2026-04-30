@@ -58,6 +58,13 @@ body {
     background: transparent;
 }
 
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 15px 50px;
+    border-bottom: 1px solid rgba(213, 190, 110, 0.1);
+}
+
 .nav-links {
     display: flex;
     gap: 30px;
@@ -353,7 +360,7 @@ body {
     display: flex;
     flex-wrap: wrap; /* Added for point-part-block */
     background-color: #000;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -1060,6 +1067,7 @@ body {
     display: flex;
     transition: transform 0.5s ease-in-out;
     gap: 30px;
+    width: 100%; /* Important for percentage transform in JS */
 }
 
 .review-card {
@@ -1703,8 +1711,7 @@ select.form-input {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%); /* Full viewport width trick */
+    width: 100%;
 }
 
 .services-bg-text {
@@ -1903,6 +1910,9 @@ select.form-input {
     .navbar-logo {
         max-width: 120px;
     }
+    .navbar.scrolled {
+        padding: 10px 20px;
+    }
     .faq-left img{
         display: none;
     }
@@ -1911,7 +1921,7 @@ select.form-input {
     }
     .look-section{
         margin-top: 50px;
-        overflow: visible;
+        overflow-x: hidden;
     }
 }
 
@@ -1943,9 +1953,10 @@ select.form-input {
         padding-bottom: 0px !important;
     }
     .reviews-section{
-        padding-right: 22px;
-        padding-left: 22px;
+        padding-right: 15px;
+        padding-left: 15px;
         padding-bottom: 0;
+        overflow: hidden;
     }
     .faq-left img{
         display: none   ;
@@ -2707,6 +2718,9 @@ select.form-input {
     .service-item-btn {
         width: 100%;
         padding: 12px;
+    }
+    .service-scroll-area{
+        padding-right: 0;
     }
 }
 
